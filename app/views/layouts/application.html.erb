@@ -12,16 +12,27 @@
   </head>
 
   <body>
-  <nav class="bg-2">
-    <center>
-      <ul id="class="list-none list-inside">
-        <li class="text-center"><%= link_to "Home", root_path %></li>
-        <li class="text-center"><%= link_to "New Blog", new_article_path %></li>
-      </ul> 
-    </center>
-</nav>
+    <nav class="bg-indigo-400 text-white w-500">
+      <center>
+        <ul class="flex">
+          <li class="flex-1 mr-2 hover:bg-indigo-700">
+            <%= link_to "Home", root_path %>
+          </li>
+          <li class="flex-1 mr-2 hover:bg-indigo-700">
+            <%= link_to "New Blog", new_article_path %>
+          </li>
+        </ul>
+      </ center>  
+    </nav>
     <div class="container mx-auto px-4 py-4">
       <%= yield %>
     </div>
+    <footer class="bg-indigo-400 text-white">
+      <center>
+        <p>Fuat Guzel</p>
+        <p><a href="mailto:fuatguzel@protonmail.com">📧</a>
+        </p>
+      </ center>
+    </footer>
   </body>
 </html>

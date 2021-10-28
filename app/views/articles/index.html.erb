@@ -1,8 +1,8 @@
-<h1 class="text-xl font-bold">Articles</h1>
+<h1 class="text-xl font-bold pb-4">Articles</h1>
 
-Our blog has <%= Article.public_count %> articles and counting!
+<p>Our blog has <%= Article.public_count %> articles and counting!</p>
 
-<ul class="list-none list-inside">
+<ul class="list-none list-inside py-4">
   <% @articles.each do |article| %>
     <li class="italic">
       <%= link_to article.title, article %>
