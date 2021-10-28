@@ -7,10 +7,21 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+  <nav class="bg-2">
+    <center>
+      <ul id="class="list-none list-inside">
+        <li class="text-center"><%= link_to "Home", root_path %></li>
+        <li class="text-center"><%= link_to "New Blog", new_article_path %></li>
+      </ul> 
+    </center>
+</nav>
+    <div class="container mx-auto px-4 py-4">
+      <%= yield %>
+    </div>
   </body>
 </html>
